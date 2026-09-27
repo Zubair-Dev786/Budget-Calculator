@@ -1,0 +1,380 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eef1f5;
+    color: #222;
+    padding: 45px 20px;
+}
+
+
+/* Main Container */
+
+.container {
+    width: 100%;
+    max-width: 720px;
+    margin: auto;
+    background: #fff;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Header */
+
+.header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.header h1 {
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+
+.header p {
+    color: #777;
+    font-size: 15px;
+}
+
+
+/* Sections */
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.income-form {
+    display: flex;
+    gap: 10px;
+}
+
+.income-form input {
+    flex: 1;
+    padding: 10px;
+}
+
+#incomeBtn {
+    height: 46px;
+    background: #222;
+    color: #fff;
+}
+
+#incomeBtn:hover {
+    background: #444;
+}
+
+
+/* Inputs */
+
+input,
+select {
+    width: 100%;
+    height: 46px;
+    padding: 0 13px;
+
+    border: 1px solid #d5d5d5;
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #fff;
+    color: #222;
+
+    font-size: 15px;
+
+    transition: 0.2s;
+}
+
+input:focus,
+select:focus {
+    border-color: #222;
+}
+
+
+/* Expense Form */
+
+.expense-form {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr auto;
+    gap: 10px;
+}
+
+.expense-form button {
+    height: 46px;
+}
+
+
+/* Buttons */
+
+button {
+    border: none;
+    border-radius: 8px;
+
+    padding: 0 17px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+/* Add Expense */
+
+#addExpenseBtn {
+    background: #222;
+    color: #fff;
+}
+
+#addExpenseBtn:hover {
+    background: #444;
+}
+
+
+/* Expense List */
+
+#expenseList {
+    width: 100%;
+
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    background: #fafafa;
+}
+
+
+/* Individual Expense */
+
+.expense-item {
+    width: 100%;
+
+    min-height: 68px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 13px 15px;
+
+    background: #fff;
+
+    border-bottom: 1px solid #eee;
+}
+
+.expense-item:last-child {
+    border-bottom: none;
+}
+
+
+/* Name + Category */
+
+.expense-info {
+    min-width: 0;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.expense-info strong {
+    font-size: 15px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.expense-info span {
+    color: #888;
+    font-size: 13px;
+}
+
+
+/* Amount */
+
+.expense-price {
+    white-space: nowrap;
+    font-size: 15px;
+}
+
+
+/* Delete */
+
+.delete-btn {
+    height: 34px;
+
+    padding: 0 12px;
+
+    background: #f0f0f0;
+    color: #333;
+
+    flex-shrink: 0;
+}
+
+.delete-btn:hover {
+    background: #ddd;
+}
+
+
+/* Reset */
+
+.reset-btn {
+    width: 100%;
+    height: 42px;
+
+    margin-top: 25px;
+
+    background: #000;
+    color: #f2f2f2;
+
+    border: 1px solid #ddd;
+}
+
+.reset-btn:hover {
+    background: #e5e5e5;
+    color: #333;
+}
+
+
+/* Budget Summary */
+
+.result {
+    background: #f7f8fa;
+
+    border: 1px solid #e2e2e2;
+
+    border-radius: 12px;
+
+    padding: 20px;
+}
+
+.result h2 {
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+
+/* Summary Rows */
+
+.summary-row {
+    min-height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.summary-row:last-child {
+    border-bottom: none;
+}
+
+.summary-row span {
+    color: #666;
+}
+
+.summary-row strong {
+    white-space: nowrap;
+}
+
+
+/* Tablet */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 25px 12px;
+    }
+
+    .container {
+        padding: 25px 20px;
+    }
+
+    .expense-form {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #addExpenseBtn {
+        width: 100%;
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    .container {
+        padding: 22px 16px;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .expense-form {
+        grid-template-columns: 1fr;
+    }
+
+    #addExpenseBtn {
+        grid-column: auto;
+    }
+
+    .expense-item {
+        gap: 10px;
+        padding: 12px;
+    }
+
+    .expense-price {
+        font-size: 14px;
+    }
+
+    .delete-btn {
+        padding: 0 10px;
+    }
+
+    .summary-row {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        gap: 4px;
+        padding: 10px 0;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .income-form {
+        flex-direction: column;
+    }
+
+    #incomeBtn {
+        width: 100%;
+    }
+
+}
